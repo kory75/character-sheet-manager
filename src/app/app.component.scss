@@ -1,0 +1,16 @@
+@import "./shared/components/randomInput/randomInput.component";
+@import "./shared/components/topMenu/topMenu.component";
+@import "./paranoia/paranoia.component";
+
+body{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+
+h1{
+  color: white;
+  background: linear-gradient(to bottom, #3333cc 10%, #9999ff 50%, #3333cc 90% );
+};

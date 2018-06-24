@@ -1,0 +1,27 @@
+.dice-button{
+  color: white;
+  background: radial-gradient(circle at center, white 0, white 15%, #9999ff 16%, #9999ff 88%, #333399 90%);
+  width: 33px;
+  &:after{
+    content: '';
+    width: 6px;
+    height: 6px;
+    display: block;
+    background: white;
+    position: relative;
+    top: -10px;
+    left: -8px;
+    border-radius: 3px;
+  }
+  &:before{
+    content: '';
+    width: 6px;
+    height: 6px;
+    display: block;
+    background: white;
+    position: relative;
+    top: 10px;
+    left: 9px;
+    border-radius: 3px;
+  }
+}

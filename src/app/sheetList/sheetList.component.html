@@ -1,0 +1,14 @@
+<section class="cards-holder">
+    <div class="card" *ngFor="let sheet of sheets">
+        <img class="card-img-top" src="../assets/{{sheet.image ? sheet.image : sheetImageFallback}}" alt="{{sheet.name}}">
+        <div class="card-body">
+            <h5 class="card-title">{{sheet.name}}</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Game:{{sheet.game}}</li>
+                <li class="list-group-item">Edition:{{sheet.edition}}</li>
+                <li class="list-group-item">Version:{{sheet.sheetVersion}}</li>
+            </ul>
+            <a href="{{sheet.link}}" class="btn btn-primary">Open</a>
+        </div>
+    </div>
+</section>

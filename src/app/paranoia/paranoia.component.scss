@@ -1,0 +1,41 @@
+@import './colorRank/colorRank.component';
+
+$black-color: #333;
+$white-color: #fff;
+
+%title-font {
+  font-family: "Comic Sans MS", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+}
+
+#paranoia {
+  @extend %title-font;
+  border-collapse: collapse;
+  .page {
+    padding: 5px 7px;
+    h1 {
+      background-color: rgb(170, 170, 170);
+      color: $black-color;
+      border: 2px solid $black-color;
+      margin-bottom: 0;
+      text-align: center;
+    }
+    .panel{
+      padding: 0;
+      border: 2px solid $black-color;
+      &.general{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50px 50px;
+        grid-column-gap: 20px;
+        grid-row-gap: 15px;
+        padding: 10px 15px 15px;
+      }
+      h2{
+        background-color: $black-color;
+        color: $white-color;
+        text-align: center;
+      }
+    }
+  }
+}

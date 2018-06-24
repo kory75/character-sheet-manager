@@ -1,0 +1,29 @@
+//list or map
+$colorRankList: (
+        ir: (black, red),
+        r: (red, white),
+        o: (orange, white),
+        y: (yellow, white),
+        g: (green, white),
+        b: (blue, white),
+        i: (indigo,white),
+        v: (violet, white),
+        uv: (white, violet)
+);
+
+.btn-toolbar{
+  button{
+    margin-right: 3px;
+    text-shadow: grey 1px 1px;
+    @each $rank, $value in $colorRankList {
+      &.rank-#{$rank} {
+        background-color: nth($value,1);
+        color: nth($value,2);
+
+      }
+    }
+    &.active{
+      outline: 2px blue solid;
+    }
+  }
+}

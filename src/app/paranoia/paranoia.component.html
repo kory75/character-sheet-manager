@@ -1,0 +1,46 @@
+<topMenu></topMenu>
+<a href="home">< Back</a>
+<section class="notification"></section>
+<section id="paranoia">
+    <section class="page front">
+        <h1>Paranoia Character Sheet</h1>
+        <section class="panel general">
+            <randomCharacterName type="text" label="Character Name"></randomCharacterName>
+
+            <randomInput type="player" label="Player Name" showDice="false"></randomInput>
+
+            <colorRank label="Color Rank"></colorRank>
+
+            <randomDropdown label="Service Group" ></randomDropdown>
+        </section>
+        <section class="panel attributes-weapons">
+            <h2>Attributes</h2>
+
+            <randomAttribute *ngFor="let attribute of rules.attributes.fields" [label]="attribute.label" [dices]="attribute.dice" ></randomAttribute>
+
+            <h2>Weapons & Armor</h2>
+
+        </section>
+
+        <section class="panel skills">
+
+        </section>
+    </section>
+    <section class="page secret">
+        <h1>Paranoia Character Sheet (Secret)</h1>
+        <section class="panel treasonous">
+
+        </section>
+        <section class="panel equipment">
+            <h2>Equipment</h2>
+
+        </section>
+        <section class="panel notes">
+            <h2>Notes</h2>
+
+        </section>
+    </section>
+</section>
+
+
+

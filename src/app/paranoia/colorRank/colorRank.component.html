@@ -1,0 +1,10 @@
+<div class="form-group">
+    <label>{{label}}</label>
+    <div class="input-group">
+        <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group" role="group">
+                <button *ngFor="let item of Data" ngClass="{'active': item.id == selectedColor}" type="btn btn-secondary" class="rank-{{item.id}}">{{item.title}}</button>
+            </div>
+        </div>
+    </div>
+</div>
