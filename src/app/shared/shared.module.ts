@@ -7,6 +7,7 @@ import { RandomDropdownComponent } from "./components/randomDropdown/randomDropd
 
 import { FormsModule } from '@angular/forms';
 import {CommonModule} from "@angular/common";
+import {CalculatedInputComponent} from './components/calculatedInput/calculatedInput.component';
 
 
 
@@ -15,6 +16,7 @@ import {CommonModule} from "@angular/common";
         TopMenuComponent,
         RandomInputComponent,
         RandomDropdownComponent,
+        CalculatedInputComponent,
     ],
     imports: [
         FormsModule,
@@ -24,6 +26,7 @@ import {CommonModule} from "@angular/common";
         TopMenuComponent,
         RandomInputComponent,
         RandomDropdownComponent,
+        CalculatedInputComponent,
     ],
     providers: [],
 })

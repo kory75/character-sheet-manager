@@ -1,28 +1,92 @@
-<topMenu></topMenu>
+<top-menu></top-menu>
 <a href="home">< Back</a>
 <section class="notification"></section>
 <section id="paranoia">
     <section class="page front">
         <h1>Paranoia Character Sheet</h1>
         <section class="panel general">
-            <randomCharacterName type="text" label="Character Name"></randomCharacterName>
+            <paranoia-random-character-name type="text" label="Character Name"></paranoia-random-character-name>
 
-            <randomInput type="player" label="Player Name" showDice="false"></randomInput>
+            <random-input type="player" label="Player Name" [showDice]="false"></random-input>
 
-            <colorRank label="Color Rank"></colorRank>
+            <paranoia-color-rank label="Color Rank"></paranoia-color-rank>
 
-            <randomDropdown label="Service Group" ></randomDropdown>
+            <random-dropdown [label]="rules.service_group.label" [data]="rules.service_group.options" [name]="rules.service_group.name" dice="[rules.service_group.dice]" ></random-dropdown>
         </section>
         <section class="panel attributes-weapons">
-            <h2>Attributes</h2>
+            <article>
+                <h2>Attributes</h2>
 
-            <randomAttribute *ngFor="let attribute of rules.attributes.fields" [label]="attribute.label" [dices]="attribute.dice" ></randomAttribute>
+                <article class="attributes-bonus">
+                    <div class="attributes">
+                        <paranoia-random-attribute *ngFor="let attribute of rules.attributes.fields" [label]="attribute.label" [dices]="attribute.dice" ></paranoia-random-attribute>
 
-            <h2>Weapons & Armor</h2>
+                    </div>
+
+                    <div class="bonus">
+                        <calculated-input *ngFor="let carryingCapacity of rules.carrying_capacity.fields"  [showDice]="false" [disabled]="true" [label]="carryingCapacity.label" [unit]="'kg'"></calculated-input>
+
+                        <paranoia-bonus-input *ngFor="let bonus of rules.bonus.fields"  [showDice]="false" [disabled]="true" [label]="bonus.label"></paranoia-bonus-input>
+                    </div>
+
+                    <div class="skill-base">
+                        <calculated-input *ngFor="let skillBases of rules.skillbases.fields"  [showDice]="false" [disabled]="true" [label]="skillBases.label"></calculated-input>
+                    </div>
+                </article>
+
+            </article>
+
+            <article class="weapon-armour">
+                <h2>Weapons & Armor</h2>
+
+                <article class="weapon">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Weapon</td>
+                                <td>Skill Number</td>
+                                <td>Type</td>
+                                <td>Damage Rating</td>
+                                <td>Range</td>
+                                <td>Exp?</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let weaponRowNumber of [0,1,2,3,4]">
+                                <td><input type="text" value="" /></td>
+                                <td><calculated-input
+                                        [showDice]="false"
+                                        [disabled]="true"
+                                        type="number"
+                                        [min]="1"
+                                        [max]="10"
+                                        ></calculated-input></td>
+                                <td>
+                                    <random-dropdown [data]="rules.weapon_types"
+                                                     [name]="'weapon' + weaponRowNumber"
+                                                     [showDice]="false">
+                                    </random-dropdown>
+                                </td>
+                                <td><input type="number" value="" /></td>
+                                <td><input type="number" value="" /></td>
+                                <td><input type="checkbox" value="" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+                <article class="armour">
+                    <random-input type="worn" label="Armour Worn" [showDice]="false"></random-input>
+                    <random-input type="number" min="1" max="10" label="Rating" [showDice]="false"></random-input>
+                </article>
+            </article>
 
         </section>
 
         <section class="panel skills">
+
+            <h2>Skills</h2>
+
+            <calculated-input [showDice]="false" [disabled]="true" [label]="'Avaliable Points'" value="30"></calculated-input>
 
         </section>
     </section>

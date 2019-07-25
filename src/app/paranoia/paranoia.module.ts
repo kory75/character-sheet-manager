@@ -5,7 +5,8 @@ import { RandomCharacterNameComponent } from "./randomCharacterName/randomCharac
 import { SharedModule } from "../shared/shared.module";
 import { ColorRankComponent } from "./colorRank/colorRank.component";
 import { RandomAttributeComponent } from "./attribute/attribute.component";
-import {CommonModule} from '@angular/common'
+import { BonusComponent } from './bonus/bonus.comopnent';
+import {CommonModule} from '@angular/common';
 
 const paranoiaRoutes: Routes = [
     {
@@ -20,6 +21,7 @@ const paranoiaRoutes: Routes = [
         RandomCharacterNameComponent,
         ColorRankComponent,
         RandomAttributeComponent,
+        BonusComponent
     ],
     imports: [
         CommonModule,

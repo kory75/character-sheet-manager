@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SheetListComponent } from './sheetList/sheetList.component';
 
 import { RouterModule, Routes } from '@angular/router';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import { ParanoiaModule } from "./paranoia/paranoia.module";
 
 const appRoutes: Routes = [
@@ -31,6 +33,7 @@ const appRoutes: Routes = [
           appRoutes,
           { enableTracing: true } // <-- debugging purposes only
       ),
+      NgbModule,
       ParanoiaModule
   ],
   providers: [],

@@ -103,7 +103,11 @@
 		},
 "bonus" : {
 		"dice" : "d20",
-		"bonus_bands" : { "1" : "0","14" : "1","19" : "2" },
+		"bonus_bands" : [
+			{"limit": "1", "value": "0"},
+			{"limit": "14", "value": "1"},
+			{"limit":"19", "value":"2"}
+		],
 		"fields" :
 		[
 		{
@@ -602,6 +606,16 @@
 				}
 			]
 		},
+"weapon_types": [
+	{
+		"label":"L",
+		"description":"Laser"
+	},
+	{
+		"label":"P",
+		"description":"Projectile"
+	}
+],
 "default_equipments" : {
 			"plasticreds" : "100",
 			"weapon" : {

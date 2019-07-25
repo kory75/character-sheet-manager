@@ -4,9 +4,12 @@
 
         <input class="form-controll" id="{{id}}" type="{{type}}"
                min="{{min}}" max="{{max}}" step="{{step}}"
+               [disabled]="disabled"
                [(ngModel)]="inputValue"  />
         <div class="input-group-append" *ngIf="showDice">
+
             <button class="btn btn-outline-secondary dice-button" type="button" (click)="randomClicked()"></button>
+            <div *ngIf="unit" class="input-group-text" >{{unit}}</div>
         </div>
     </div>
 </div>

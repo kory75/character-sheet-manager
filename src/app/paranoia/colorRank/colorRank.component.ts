@@ -2,7 +2,7 @@ import {Component, Output, Input} from '@angular/core';
 
 
 @Component({
-    selector: 'colorRank',
+    selector: 'paranoia-color-rank',
     templateUrl: './colorRank.component.html',
     styleUrls: ['./colorRank.component.scss']
 })

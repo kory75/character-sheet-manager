@@ -1,11 +1,14 @@
 <div class="form-group">
-    <label for="{{id}}">{{label}}</label>
     <div class="input-group">
-
-        <select class="form-controll" id="{{id}}" >
-            <option *ngFor="let item of data" [value]="item.value">{{item.name}}</option>
+        <label for="{{name}}">{{label}}</label>
+        <select class="form-controll" id="{{name}}">
+            <option *ngFor="let item of data"
+                    [value]="item.label"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    [title]="item.description">{{item.label}}</option>
         </select>
-        <div class="input-group-append">
+        <div class="input-group-append" *ngIf="showDice">
             <button class="btn btn-outline-secondary dice-button" type="button"  (click)="randomClicked()"></button>
         </div>
     </div>

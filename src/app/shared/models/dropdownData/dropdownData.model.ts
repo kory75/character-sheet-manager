@@ -1,4 +1,7 @@
 export interface IDropdownData {
-    name: string;
-    value: string;
+    label: string;
+    value?: string;
+    band?: number;
+    description?: string;
+    provide?: string;
 }
