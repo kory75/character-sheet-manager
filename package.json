@@ -22,14 +22,14 @@
     "@angular/router": "^8.1.2",
     "@ng-bootstrap/ng-bootstrap": "^5.1.0",
     "core-js": "^2.6.9",
-    "npm": "^6.10.2",
+    "npm": "^9.6.5",
     "rxjs": "^6.5.2",
     "rxjs-compat": "^6.5.2",
     "zone.js": "^0.8.29"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.801.2",
-    "@angular/cli": "~8.1.2",
+    "@angular/cli": "~15.2.6",
     "@angular/compiler-cli": "^8.1.2",
     "@angular/language-service": "^8.1.2",
     "@types/jasmine": "^2.8.16",
